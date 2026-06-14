@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="onboarding-screen">
+      <div class="onboarding-content">
+          <div class="onboarding-logo">
+              <img src="assets/images/me-splash.png" alt="Logo">
+          </div>
+          <h2 class="onboarding-title">Welcome to My Portfolio</h2>
+          <p class="onboarding-subtitle">Preparing creative experiences...</p>
+          <div class="onboarding-loader">
+              <div class="loader-progress"></div>
+          </div>
+      </div>
+  </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">MY<span>.PORTFOLIO</span></a>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Tools</a></li>
+          <li><a href="#portfolio">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text animate-fade-in-left">
+          <span class="badge">OPEN TO WORK</span>
+          <h1>Halo, saya <span class="highlight">Bekti Agung Nugroho</span></h1>
+          <p class="subtitle">
+            Web Developer & Creative Worker yang berfokus pada pengalaman
+            digital yang <span class="text-accent">elegan</span> dan
+            <span class="text-accent">fungsional</span>.
+          </p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn-primary">Lihat Projek</a>
+            <a href="#about" class="btn-secondary">Tentang Saya</a>
+          </div>
+        </div>
+        <div class="hero-image-container animate-fade-in-right">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image">
+            <img
+              src="assets/images/me.png"
+              alt="Bekti Agung Nugroho"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left scroll-animate">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p class="section-desc">
+              Saya adalah lulusan D3 Teknik Informatika yang memadukan keahlian
+              berpikir analisis dengan kreativitas tinggi.Terbiasa mengerjakan
+              proyek seperti web development, edting video dan Fotografi.
+              berpengalaman lebih dari 2 tahun sebagai freelancer video editor
+              dan berpengalaman dalam pembuatan sistem informasi di kampus
+              semasa kuliah membuktikan bahwa saya mampu membangun identitas
+              digital yang tak hanya indah dipandang tapi juga berpeforma tinggi
+            </p>
+
+            <h3 class="sub-title">Layanan</h3>
+            <div class="services-list">
+              <div class="service-card">
+                <div class="service-icon web-dev">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Web Development</h4>
+                  <p>
+                    Membangun website responsif & cepat dengan clean & modular
+                    code.
+                  </p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon video-editing">
+                  <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Video Editing</h4>
+                  <p>
+                    Penyusunan narasi visual yang dinamis berorientasi pada
+                    penyampaian cerita.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right scroll-animate">
+            <div class="timeline-block">
+              <h3 class="timeline-title">
+                <i class="fa-solid fa-graduation-cap"></i> Pendidikan
+              </h3>
+              <div class="timeline-item">
+                <span class="time-tag">2022 - 2025</span>
+                <h4>Politeknik Sawunggalih Aji</h4>
+                <p class="timeline-meta">D3 Teknik Informatika</p>
+              </div>
+              <div class="timeline-item">
+                <span class="time-tag">2019-2022</span>
+                <h4>SMA Negeri 4 Purworejo</h4>
+                <p class="timeline-meta">MIPA</p>
+              </div>
+            </div>
+
+            <div class="timeline-block">
+              <h3 class="timeline-title">
+                <i class="fa-solid fa-briefcase"></i> Pengalaman
+              </h3>
+              <div class="timeline-item">
+                <span class="time-tag">2023 - Sekarang</span>
+                <h4>Freelancer Video Editor</h4>
+                <p class="timeline-meta">Ilmuwan Top Youtube Channel</p>
+              </div>
+              <div class="timeline-item">
+                <span class="time-tag">2024 - 2025</span>
+                <h4>Freelancer Fotografer</h4>
+                <p class="timeline-meta"></p>
+            </div>
+            <div class="timeline-item">
+              <span class="time-tag">Juli - September 2024</span>
+              <h4>IT Support Intern</h4>
+              <p class="timeline-meta">MTS Ma’Arif NU Kemiri Winong </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="tools-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title scroll-animate">Tools</h2>
+        <div class="tools-grid scroll-animate">
+          <!-- 1. VS Code -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fa-solid fa-file-code text-vscode"></i>
+            </div>
+            <span>VS Code</span>
+          </div>
+
+          <!-- 2. Figma -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fa-brands fa-figma text-figma"></i>
+            </div>
+            <span>Figma</span>
+          </div>
+
+          <!-- 3. Capcut  -->
+          <div class="tool-card">
+            <div class="tool-icon svg-icon text-capcut">
+              <img src="assets/images/capcut.svg" alt="CapCut Logo" class="icon-software">
+            </div>
+            <span>CapCut</span>
+          </div>
+
+          <!-- 4. Adobe Premiere Pro  -->
+          <div class="tool-card">
+            <div class="tool-icon svg-icon text-premiere">
+              <img src="assets/images/adobe-premiere-pro.svg" alt="Adobe Premiere Pro Logo" class="icon-software">
+            </div>
+            <span>Premiere Pro</span>
+          </div>
+
+          <!-- 5. Adobe Lightroom  -->
+          <div class="tool-card">
+            <div class="tool-icon svg-icon text-lightroom">
+              <img src="assets/images/lightroom.png" alt="Adobe Lightroom Logo" class="icon-software">
+            </div>
+            <span>Lightroom</span>
+          </div>
+
+          <!-- 6. Canva  -->
+          <div class="tool-card">
+            <div class="tool-icon svg-icon text-canva">
+              <img src="assets/images/canva.webp" alt="Canva Logo" class="icon-software">
+            </div>
+            <span>Canva</span>
+          </div>
+
+          <!-- 7. PHP -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fa-brands fa-php text-php"></i>
+            </div>
+            <span>PHP</span>
+          </div>
+
+          <!-- 8. Java Script -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fa-brands fa-js text-javascript"></i>
+            </div>
+            <span>JavaScript</span>
+          </div>
+
+          <!-- 9. Laravel -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fa-brands fa-laravel text-laravel"></i>
+            </div>
+            <span>Laravel</span>
+          </div>
+
+          <!-- 10. Bootstrap -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fa-brands fa-bootstrap text-bootstrap"></i>
+            </div>
+            <span>Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section section-padding">
+      <div class="container">
+        <span class="section-badge scroll-animate">PROJECT</span>
+
+        <h3 class="sub-section-title scroll-animate">Web Development</h3>
+        <div class="projects-grid scroll-animate">
+          <div
+            class="project-card web-project"
+            data-preview="assets/images/porto-sibimo-overlay.png"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/porto-sibimo.png"
+                alt="SiBimo"
+              />
+              <div class="preview-overlay">
+                <span class="preview-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Client Project</span>
+            </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-web">PHP</span>
+                <span class="tag tag-boot">Bootstrap</span>
+                <span class="tag tag-tech">Laravel</span>
+                <span class="tag tag-design">Figma</span>
+              </div>
+              <h3>Sistem Informasi Bimbingan Praktik Kerja Lapangan Dan Tugas Akhir</h3>
+              <p>
+                Solusi untuk mempermudah proses bimbingan tugas akhir di Politeknik Sawunggalih
+                Aji. Dengan fitur lengkap seperti autentikasi dan otorisasi user, sistem penilaian
+                ujian akhir, pencatatan riwayat bimbingan hingga notifikasi secara real time via
+                WhatsApp
+              </p>
+              <a href="https://sibimo.polsa.ac.id/" target="_blank" class="btn-view-details"
+                >Lihat Detail <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="project-card design-project"
+            data-preview="assets/images/porto-alhikmah-overlay.png"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/porto-alhikmah.png"
+                alt="Nexus Analytics Dashboard"
+              />
+              <div class="preview-overlay">
+                <span class="preview-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Client Project</span>
+            </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-web">PHP</span>
+                <span class="tag tag-boot">Bootstrap</span>
+                <span class="tag tag-tech">Laravel</span>
+                <span class="tag tag-design">Figma</span>
+              </div>
+              <h3>Company Profile Website</h3>
+              <p>
+                Eksplorasi detail informasi seputar Pondok Pesantren Al Hikmah. Memadukan antara
+                fleksibilitas user dan estetika UI dengan fitur autentikasi user, kelola berita
+                hingga kustomisasi website.
+              </p>
+              <a href="#" class="btn-view-details"
+                >Lihat Detail <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-section-title scroll-animate">UI/UX Design</h3>
+        <div class="mini-grid scroll-animate">
+          <div class="mini-card-zoom design-project" data-preview="assets/images/mcui1.png">
+            <img src="assets/images/mcui1.png" alt="Mobile Music App" />
+            <div class="preview-overlay">
+              <span class="preview-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Dummy Project</span>
+            </div>
+          </div>
+
+          <div class="mini-card-zoom design-project" data-preview="assets/images/mcui2.png">
+            <img src="assets/images/mcui2.png" alt="SiBimo Web App" />
+                        <div class="preview-overlay">
+              <span class="preview-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Client Project</span>
+            </div>
+          </div>
+
+          <div class="mini-card-zoom design-project" data-preview="assets/images/mcui3.png">
+            <img src="assets/images/mcui3.png" alt="LMS Mobile App" />
+                        <div class="preview-overlay">
+              <span class="preview-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Dummy Project</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-section-title scroll-animate">Video Editing</h3>
+        <div class="video-grid scroll-animate">
+          <a href="https://youtu.be/dbS13VhIq50?si=vBbSokMwXX2OyHco" target="_blank" class="video-card">
+            <img src="assets/images/tb-it1.jpg" alt="Video 1">
+            <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+          </a>
+          <a href="https://youtu.be/ecXo2GX41i0?si=s9hrdNUPv2uuP94p" target="_blank" class="video-card">
+            <img src="assets/images/tb-it2.jpg" alt="Video 1">
+            <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+          </a>
+          <a href="https://youtu.be/S42Vgljhkv0?si=ZX0cn3RW6wgOsr98" target="_blank" class="video-card">
+            <img src="assets/images/tb-it3.jpg" alt="Video 1">
+            <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+          </a>
+          <a href="https://youtu.be/hu2b_n4YaMU?si=3WFk566UWJ4fVyH7" target="_blank" class="video-card">
+            <img src="assets/images/tb-it4.jpg" alt="Video 1">
+            <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+          </a>
+        </div>
+
+        <h3 class="sub-section-title scroll-animate">Fotografi</h3>
+        <div class="photo-grid scroll-animate">
+          <div class="photo-card">
+            <img
+              src="assets/images/tb1.jpg"
+              alt="Landscape"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="assets/images/tb2.jpg"
+              alt="Architecture"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="assets/images/tb3.jpg"
+              alt="Mountain"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="assets/images/tb4.jpg"
+              alt="Forest"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="assets/images/tb5.jpg"
+              alt="Flower"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="assets/images/tb6.jpg"
+              alt="Road"
+            />
+          </div>
+        </div>
+
+        <div class="meta-container scroll-animate">
+          <div class="meta-box">
+            <h4>Minat & Hobi</h4>
+            <div class="meta-tags">
+              <span class="m-tag">Street Photography</span>
+              <span class="m-tag">Travelling</span>
+              <span class="m-tag">Open Source</span>
+              <span class="m-tag">Hiking</span>
+              <span class="m-tag">Sport</span>
+            </div>
+          </div>
+          <div class="meta-box dashed-border">
+            <h4>Ketersediaan</h4>
+            <p class="status-text">
+              <span class="pulse-dot"></span> Terbuka untuk Projek Baru
+            </p>
+            <p class="status-desc">
+              Diskusikan ide hebatmu, saya melayani jasa freelance skala kecil,
+              menengah hingga jangka panjang.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title scroll-animate">Mari Berkolaborasi</h2>
+        <p class="section-desc scroll-animate">
+          Punya projek menarik atau sekedar ingin menyapa? Hubungi saya melalui
+          platform di bawah ini.
+        </p>
+
+        <div class="contact-grid scroll-animate">
+          <a href="mailto:bektiagung777@gmail.com" class="contact-card">
+            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>bektiagung777@gmail.com</p>
+          </a>
+          <a
+            href="https://wa.me/628999711295"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="c-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h4>WhatsApp</h4>
+            <p>+62 8999 7112 95</p>
+          </a>
+          <div class="contact-card">
+            <div class="c-icon"><i class="fa-solid fa-share-nodes"></i></div>
+            <h4>Sosial Media</h4>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/bektiag_ngr?igsh=azZ0cmV1c3gzaGJ0" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/bekti-agung-nugroho-649b49368" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-behance"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-left">
+          <h3>MY.PORTFOLIO</h3>
+          <p>&copy; 2026 Bekti Agung Nugroho.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Portfolio</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
