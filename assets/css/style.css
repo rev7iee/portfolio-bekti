@@ -227,6 +227,88 @@ h4 {
   animation: loadProgress 2.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
 }
 
+/* Container slider horizontal */
+.mini-grid.uiux-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar tipis elegan */
+.mini-grid.uiux-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.mini-grid.uiux-slider::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+.mini-grid.uiux-slider::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+/* Kartu pembungkus (gambar + deskripsi) */
+.uiux-card {
+  flex: 0 0 calc((100% - 40px) / 3); /* Desktop: pas 3 kartu terlihat, kartu ke-4 digeser */
+  min-width: 270px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.uiux-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Penyesuaian gambar agar menyatu rapi dengan kartu */
+.uiux-card .mini-card-zoom {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 16px 16px 0 0;
+  box-shadow: none;
+}
+
+/* Area teks deskripsi */
+.uiux-desc {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.uiux-desc h4 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.uiux-card:hover .uiux-desc h4 {
+  color: var(--accent);
+}
+
+.uiux-desc p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Tampilan Mobile */
+@media (max-width: 768px) {
+  .uiux-card {
+    flex: 0 0 82%; /* Memperlihatkan 1 kartu penuh dan cuplikan kartu berikutnya */
+    min-width: unset;
+  }
+}
+
 /* Keyframes Animasi */
 @keyframes logoPulse {
   0% {
