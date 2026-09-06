@@ -146,3 +146,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// --- 6. Tombol Navigasi Slider UI/UX ---
+const uiuxSlider = document.getElementById("uiux-slider");
+const btnPrev = document.getElementById("slide-prev");
+const btnNext = document.getElementById("slide-next");
+
+if (uiuxSlider && btnPrev && btnNext) {
+  btnNext.addEventListener("click", () => {
+    // Geser sejauh 1 kartu + gap
+    const cardWidth = uiuxSlider.querySelector(".uiux-card").offsetWidth + 24;
+    uiuxSlider.scrollBy({ left: cardWidth, behavior: "smooth" });
+  });
+
+  btnPrev.addEventListener("click", () => {
+    const cardWidth = uiuxSlider.querySelector(".uiux-card").offsetWidth + 24;
+    uiuxSlider.scrollBy({ left: -cardWidth, behavior: "smooth" });
+  });
+}

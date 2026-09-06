@@ -69,11 +69,6 @@ h4 {
   margin-bottom: 10px;
 }
 
-/* .section-title {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-} */
-
 .sub-section-title {
   font-size: 1.5rem;
   margin: 20px 0 24px 0;
@@ -227,89 +222,7 @@ h4 {
   animation: loadProgress 2.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
 }
 
-/* Container slider horizontal */
-.mini-grid.uiux-slider {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding-bottom: 24px;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Scrollbar tipis elegan */
-.mini-grid.uiux-slider::-webkit-scrollbar {
-  height: 6px;
-}
-.mini-grid.uiux-slider::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.04);
-  border-radius: 10px;
-}
-.mini-grid.uiux-slider::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 10px;
-}
-
-/* Kartu pembungkus (gambar + deskripsi) */
-.uiux-card {
-  flex: 0 0 calc((100% - 40px) / 3); /* Desktop: pas 3 kartu terlihat, kartu ke-4 digeser */
-  min-width: 270px;
-  background-color: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-
-.uiux-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--card-hover-shadow);
-}
-
-/* Penyesuaian gambar agar menyatu rapi dengan kartu */
-.uiux-card .mini-card-zoom {
-  width: 100%;
-  aspect-ratio: 16/10;
-  border-radius: 16px 16px 0 0;
-  box-shadow: none;
-}
-
-/* Area teks deskripsi */
-.uiux-desc {
-  padding: 16px 18px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.uiux-desc h4 {
-  font-size: 1.1rem;
-  color: var(--text-main);
-}
-
-.uiux-card:hover .uiux-desc h4 {
-  color: var(--accent);
-}
-
-.uiux-desc p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* Tampilan Mobile */
-@media (max-width: 768px) {
-  .uiux-card {
-    flex: 0 0 82%; /* Memperlihatkan 1 kartu penuh dan cuplikan kartu berikutnya */
-    min-width: unset;
-  }
-}
-
-/* Keyframes Animasi */
+/* Keyframes Animasi On-boarding */
 @keyframes logoPulse {
   0% {
     transform: scale(1);
@@ -343,6 +256,121 @@ h4 {
   100% {
     width: 100%;
   }
+}
+
+/* ==========================================================================
+   Slider UI/UX Design (Pembaruan Panah & Rasio Mockup)
+   ========================================================================== */
+.uiux-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 16px 0;
+}
+
+.uiux-header-wrapper .sub-section-title {
+  margin: 0;
+}
+
+.slider-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.slide-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: var(--transition);
+}
+
+.slide-btn:hover {
+  background-color: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(176, 58, 46, 0.2);
+}
+
+.mini-grid.uiux-slider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 4px 28px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mini-grid.uiux-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.uiux-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.uiux-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.uiux-card .mini-card-zoom {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 20px 20px 0 0;
+  box-shadow: none;
+  background-color: #f7f6f4;
+}
+
+.uiux-card .mini-card-zoom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.uiux-desc {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.uiux-desc h4 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.uiux-card:hover .uiux-desc h4 {
+  color: var(--accent);
+}
+
+.uiux-desc p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -638,7 +666,7 @@ h4 {
 
 .tool-card {
   background-color: #fff;
-  padding: 24px 16px;
+  padding: 20px;
   border-radius: 20px;
   box-shadow: var(--card-shadow);
   display: flex;
@@ -658,24 +686,47 @@ h4 {
   align-items: center;
   justify-content: center;
 }
-.text-orange {
-  color: #e34f26;
+
+.tool-icon.svg-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
 }
-.text-purple {
-  color: #a259ff;
+
+.tool-icon.svg-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
-.text-brown {
-  color: #d97706;
+
+.text-orange { color: #e34f26; }
+.text-purple { color: #a259ff; }
+.text-brown { color: #d97706; }
+.text-blue { color: #00c2ff; }
+.text-red { color: #ff2d20; }
+.text-indigo { color: #7952b3; }
+.text-vscode { color: #007acc; }
+.text-figma { color: #f24e1e; }
+.text-capcut { color: #000000; }
+.text-premiere { color: #ea77ff; }
+.text-lightroom { color: #31a8ff; }
+.text-canva { color: #00c4cc; }
+.text-php { color: #777bb4; }
+.text-javascript { color: #f7df1e; }
+.text-laravel { color: #ff2d20; }
+.text-bootstrap { color: #7952b3; }
+
+.icon-software {
+  height: 48px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.text-blue {
-  color: #00c2ff;
-}
-.text-red {
-  color: #ff2d20;
-}
-.text-indigo {
-  color: #7952b3;
-}
+
 .tool-card span {
   font-weight: 600;
   font-size: 0.9rem;
@@ -1210,14 +1261,24 @@ h4 {
     display: none;
   }
 
-  .mini-grid,
+  /* Slider UI/UX di Layar Mobile */
+  .uiux-card {
+    flex: 0 0 85%;
+    min-width: unset;
+  }
+
+  .slider-nav-btns {
+    display: none;
+  }
+
+  .mini-grid:not(.uiux-slider),
   .photo-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .mini-grid,
+  .mini-grid:not(.uiux-slider),
   .video-grid,
   .photo-grid {
     grid-template-columns: 1fr;
@@ -1225,66 +1286,4 @@ h4 {
   .tools-grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-.tool-icon.svg-icon {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.tool-icon.svg-icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.text-vscode {
-  color: #007acc;
-}
-.text-figma {
-  color: #f24e1e;
-}
-.text-capcut {
-  color: #000000;
-}
-.text-premiere {
-  color: #ea77ff;
-}
-.text-lightroom {
-  color: #31a8ff;
-}
-.text-canva {
-  color: #00c4cc;
-}
-.text-php {
-  color: #777bb4;
-}
-.text-javascript {
-  color: #f7df1e;
-}
-.text-laravel {
-  color: #ff2d20;
-}
-.text-bootstrap {
-  color: #7952b3;
-}
-
-.icon-software {
-  height: 48px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tool-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
