@@ -337,17 +337,18 @@ h4 {
 
 .uiux-card .mini-card-zoom {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1; 
   border-radius: 20px 20px 0 0;
   box-shadow: none;
   background-color: #f7f6f4;
+  overflow: hidden;
 }
 
 .uiux-card .mini-card-zoom img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: cover; /* Pas mengisi frame bujur sangkar */
+  object-position: center;
 }
 
 .uiux-desc {
